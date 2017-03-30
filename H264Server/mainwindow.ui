@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>实时视频服务器</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDevice">
+    <property name="title">
+     <string>设备</string>
+    </property>
+    <widget class="QMenu" name="menuDevice_List">
+     <property name="title">
+      <string>设备列表</string>
+     </property>
+    </widget>
+    <addaction name="actionStart_Device"/>
+    <addaction name="actionStop_Device"/>
+    <addaction name="separator"/>
+    <addaction name="menuDevice_List"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actionCodec_settings"/>
+    <addaction name="actionNetwork_settings"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpen_File"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuDevice"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionStart_Device">
+   <property name="text">
+    <string>启动设备</string>
+   </property>
+  </action>
+  <action name="actionStop_Device">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>停止设备</string>
+   </property>
+  </action>
+  <action name="actionCodec_settings">
+   <property name="text">
+    <string>编码设置</string>
+   </property>
+  </action>
+  <action name="actionNetwork_settings">
+   <property name="text">
+    <string>网络设置</string>
+   </property>
+  </action>
+  <action name="action_DeviceList">
+   <property name="text">
+    <string>设备列表</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
